@@ -31,7 +31,12 @@ void printBoard(int board[8][8]){
 
 //check whether a rule is violated or not
 bool checking(int board[8][8], int step, int place, int kind){
-
+	
+	if(kind<0 || kind>6)
+	{
+		return false;
+	}
+	
 	if(board[step-1][place-1] == 0)
 	{
 		if(step==8)
